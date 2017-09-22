@@ -16,7 +16,7 @@ Node+Express
 项目预览
 -------
 
-！[]()首页
+![](https://github.com/liuoulin/myblog/blob/master/img/index.png?raw=true)
 
 
 复制项目
