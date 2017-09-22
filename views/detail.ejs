@@ -1,0 +1,20 @@
+<%- include header%>
+ <%if(login){%>
+    <%if(username==posts.author){%>
+    <p>
+        <span><a class="edit" href="/edit?id=<%= posts._id%>">编辑</a></span>
+        <span><a class="edit" href="/delete?id=<%=posts._id%>">删除</a></span>
+    </p>
+    <%}%>
+    <p><a class="detail" href="/">返回</a></p>
+    <p><h2><a href="#"><%= posts.title %></a></h2></p>
+    <p class="info">
+    作者：<a href=" "><%= posts.author %></a> |
+    日期：<%= posts.publishTime %> |
+    浏览：<%= posts.pv%>
+    </p>
+    <p><%- posts.article %></p>
+     <img src="/images/<%= img%>" alt="" style="width:200px;height:200px;">
+<%}%>
+    
+<%- include footer%>

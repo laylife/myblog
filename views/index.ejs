@@ -1,0 +1,27 @@
+<%- include header %>
+<form>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="SEARCH" name="keyword">
+        <span class="input-group-btn">
+            <input type="submit" value="搜索" class="btn btn-default" />
+        </span>
+        <span class="input-group-btn">
+        <a href="/post" class="btn btn-default"> 发表</a>
+        </span>
+    </div>
+</form>
+
+<ul class="list-group">
+<%for(var i=0;i<posts.length;i++) { %>
+     <li class="list-group-item">
+         <h3><a href="/detail?id=<%= posts[i]._id%>"><%=posts[i].title%></a></h3>
+         <p class="info">
+             <span>作者:<%=posts[i].author%></span>
+             <span>|</span>
+             <span>日期：<%=posts[i].publishTime%></span>
+         </p>
+     </li>
+     <hr>
+     <%}%>
+</ul>
+<%- include footer %>

@@ -1,0 +1,37 @@
+<%- include header %>
+<form method="post" enctype="multipart/form-data" action="/post/doPost">
+    <div class="form-group">
+        <label for="name">标题:</label>
+        <input type="text" class="form-control" name="title" id="title" placeholder="输入标题">
+    </div>
+    <div class="form-group">
+        <label for="name">文章</label>
+        <textarea class="form-control" name="article" id="article" rows="8"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="name">图片</label>
+        <input type="file" name="postImg" id="postImg" />
+    </div>
+    <hr />
+    <input type="hidden" name="pv" value=0 >
+    <input type="submit" value="发表" id="post" class="btn btn-default"/>
+</form>
+<script>
+    /* 
+                alert('发表成功');
+                window.location='/';
+            }
+        });
+    });  $('#post').click(function(){
+        var title=$('#title').val();
+        var article=$('#article').val();
+        $.post('/post/doPost',function(result){
+            if(result=='-1'){
+                alert('未填写标题或者内容');
+                return;
+            }else if(result=='-3'){
+                alert('服务器内部错误');
+                return;
+            }else{ */
+</script>
+<%- include footer %>
