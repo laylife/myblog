@@ -73,8 +73,10 @@ Node+Express
 文件解析
 -------
 ####app.js
+
 	//引入资源
 	var express = require('express');
+
 	var path = require('path');
 	var favicon = require('serve-favicon');
 	var logger = require('morgan');
